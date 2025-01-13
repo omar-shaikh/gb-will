@@ -1,10 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(home)/signup/page": "app/(home)/signup/page.js",
-  "/(home)/page": "app/(home)/page.js",
-  "/(home)/confirm-account/page": "app/(home)/confirm-account/page.js",
-  "/(home)/pricing/page": "app/(home)/pricing/page.js",
-  "/(home)/login/page": "app/(home)/login/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
   "/dashboard/willFormPage/page": "app/dashboard/willFormPage/page.js",
-  "/dashboard/page": "app/dashboard/page.js"
+  "/(home)/login/page": "app/(home)/login/page.js"
 }
