@@ -13,23 +13,46 @@ const LoginForm = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-
+    
         const user = new CognitoUser({
             Username: email,
             Pool: UserPool,
         });
-
+    
         const authDetails = new AuthenticationDetails({
             Username: email,
             Password: password,
         });
-
+    
         user.authenticateUser(authDetails, {
             onSuccess: (data) => {
                 console.log("onSuccess: ", data);
-                // Redirect to dashboard or another page
-                router.push("/dashboard");
-                
+    
+                // Fetch user attributes
+                user.getUserAttributes((err, attributes) => {
+                    if (err) {
+                        console.error("Error fetching user attributes:", err);
+                    } else {
+                        const userData = {};
+                        attributes.forEach(attribute => {
+                            if (attribute.getName() === "email") {
+                                userData.email = attribute.getValue();
+                            } else if (attribute.getName() === "given_name") {
+                                userData.given_name = attribute.getValue();
+                            } else if (attribute.getName() === "family_name") {
+                                userData.family_name = attribute.getValue();
+                            }
+                        });
+    
+                        // Save to localStorage
+                        localStorage.setItem('userDetails', JSON.stringify(userData));
+    
+                        console.log("User data saved to localStorage:", userData);
+    
+                        // Redirect to dashboard
+                        router.push("/dashboard");
+                    }
+                });
             },
             onFailure: (err) => {
                 console.error("onFailure: ", err);
@@ -41,6 +64,7 @@ const LoginForm = () => {
             },
         });
     };
+    
 
     return (
         <section className="mt-20 dark:bg-gray-900">
