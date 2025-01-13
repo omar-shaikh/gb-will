@@ -1,0 +1,20 @@
+{
+  "app/dashboard/willFormPage/page.js -> @/app/components/dashboard-comp/EstateForm/Calculation": {
+    "id": 1264,
+    "files": [
+      "static/chunks/454.998a42f4f36d7a65.js"
+    ]
+  },
+  "app/dashboard/willFormPage/page.js -> @/app/components/dashboard-comp/EstateForm/DirectFamily": {
+    "id": 5035,
+    "files": [
+      "static/chunks/35.0c22189ba4ca6b3a.js"
+    ]
+  },
+  "app/dashboard/willFormPage/page.js -> @/app/components/dashboard-comp/EstateForm/ExtendedFamily": {
+    "id": 1252,
+    "files": [
+      "static/chunks/252.3105f60a50316e61.js"
+    ]
+  }
+}

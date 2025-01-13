@@ -1,0 +1,30 @@
+{
+  "name": "gb-will-2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "amazon-cognito-identity-js": "^6.3.12",
+    "aws-amplify": "^6.6.7",
+    "aws-sdk": "^2.1692.0",
+    "chart.js": "^4.4.6",
+    "git-filter-repo": "^0.0.30",
+    "next": "^15.0.0",
+    "react": "^18",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.11",
+    "@wixc3/react-board": "^4.5.3",
+    "eslint": "^9.13.0",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
